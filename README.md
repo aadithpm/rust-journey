@@ -7,3 +7,6 @@
 [Rust: Too Many Lists](https://rust-unofficial.github.io/too-many-lists/)
 
 [The Rust Programming Language](https://doc.rust-lang.org/book/ch01-01-installation.html)
+
+
+Create a new day with `./new_day.sh <any params>`. Params get dropped in `ref.md` for the day.
