@@ -19,6 +19,11 @@ new_dir="days/day_$next_day"
 # Create the new directory
 mkdir -p "$new_dir"
 
+# Initialize Cargo project in the new directory
+cd "$new_dir"
+cargo init --name "day_$next_day" .
+cd - > /dev/null
+
 # Create ref.md with parameters as a markdown list
 if [ $# -gt 0 ]; then
     echo "# References" > "$new_dir/ref.md"
@@ -32,4 +37,4 @@ else
     echo "- No references provided" >> "$new_dir/ref.md"
 fi
 
-echo "Created $new_dir with ref.md"
+echo "Created $new_dir with Cargo project and ref.md"
